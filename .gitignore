@@ -1,7 +1,6 @@
 __pycache__/
 *.pyc
 .env
-model/*.h5
 model/*.tflite
 static/uploads/*.jpg
 static/uploads/*.jpeg
