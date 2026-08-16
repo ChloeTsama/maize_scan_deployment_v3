@@ -63,7 +63,7 @@ log.info("MaizeLeafValidator ready.")
 # Warming it up at startup avoids a slow first request; if it fails
 # (e.g. no internet during build), Stage 0 will just lazy-load on the
 # first prediction instead — either way it never blocks the app.
-if os.environ.get("WARM_GENERAL_GATE", "true").lower() == "true":
+if os.environ.get("WARM_GENERAL_GATE", "false").lower() == "true":
     try:
         from utils.general_image_gate import _get_model as _warm_general_gate
         _warm_general_gate()
